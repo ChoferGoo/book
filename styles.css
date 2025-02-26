@@ -1,0 +1,125 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa; /* Light background */
+    color: #333;
+    /* text-align: center; */
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #ffffff !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: purple !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#animated-text{
+    text-align: center;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card{
+    border:#ff6f00;
+    border-radius: 3rem 3rem;
+    box-shadow: 0px 4px 8px rgba(0, 0,
+    0, 0.1);
+
+}
+
+.card-img-top{
+    width: 100%; height: 200px; object-fit: cover; border-radius: 3rem;
+}
+
+.box-style {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff;
+}
+
+.btn{
+    margin: 2px;
+}
+
+
+/* Animated Text Styling */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Style for Animated Welcome Text */
+#animated-text {
+    color: purple;
+    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Style for Looping Text */
+#loop-animated-text {
+    color: #ff6f00;
+    text-shadow: 2px 2px 5px rgba(255, 111, 0, 0.3);
+}
+
+/* Section Styling */
+.container .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Left Side Styling */
+.text-left {
+    text-align: left;
+}
+
+/* Image Styling */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+@keyframes carSpeedIn {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.car-animation {
+    animation: carSpeedIn 1s ease-out forwards;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .text-left {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
