@@ -33,4 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animate "Book skilled drivers on single click." in a loop
     animateText("loop-animated-text", true);
 
+    document.getElementById("shareButton").addEventListener("click", function () {
+        console.log("Share button clicked!");
+
+        if (navigator.share) {
+            console.log("Web Share API is supported.");
+
+            navigator.share({
+                title: 'ChoferGoo - Driver Booking',
+                text: 'Book skilled & experienced drivers in just one click! Try ChoferGoo now.',
+                url: 'https://chofergoo.github.io/book/'  // Replace with your actual hosted URL
+            })
+            .then(() => console.log('Shared successfully'))
+            .catch((error) => console.log('Error sharing:', error));
+
+        } else {
+            console.log("Web Share API is not supported on this browser.");
+            alert("Sharing is not supported on this browser.");
+        }
+    });
+
 });
