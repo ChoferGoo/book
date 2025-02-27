@@ -33,17 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animate "Book skilled drivers on single click." in a loop
     animateText("loop-animated-text", true);
 
-    document.getElementById("shareButton").addEventListener("click", function() {
-        if (navigator.share) {
-            navigator.share({
-                title: 'ChoferGoo - Driver Booking',
-                text: 'Book skilled & experienced drivers in just one click! Try ChoferGoo now.',
-                url: window.location.href
-            })
-            .then(() => console.log('Shared successfully'))
-            .catch((error) => console.log('Error sharing:', error));
-        } else {
-            alert("Sharing is not supported in this browser.");
-        }
-    });
 });
